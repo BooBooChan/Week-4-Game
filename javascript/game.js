@@ -1,0 +1,1 @@
+var characters = ["Mufasa", "Bambis-Mom", "Gothel", "Queen", "A-n-I", "Frollo", "Kerchak", "James"]; 
