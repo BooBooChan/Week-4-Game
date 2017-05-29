@@ -11,8 +11,8 @@ var catk = [a,b,c,d,e,f,g,h]
 
 //Step 3: Assign stats to EACH character.
 
-/*---characters.indexOf() = atk.indexOf();
-characters.indexOf() = catk.indexOf();---*/
+/*""characters.indexOf() = atk.indexOf();
+characters.indexOf() = catk.indexOf();""*/
 
 /*Step 4: Create FUNCTIONs which subtract attack value from hp and add increasing multiple of base atk
 to current atk power after every turn. For balance, catk will need to be much higher than base atk.*/
@@ -34,7 +34,7 @@ $("img").on("click", function() {
 	//Float selected character to the left for the rest of the game. Float all other characters to the right.
 };
 
-})
+});
 
 //Step 6: Create a FUNCTION which removes character from roster when hp =< 0
 

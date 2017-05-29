@@ -2,63 +2,63 @@
 <html>
 	<head>
 		<title>Disney Parent Deathmatch Game</title>
-		<link rel = "stylesheet" href = "/css/style.css"><link rel = "stylesheet" href = "css/reset.css">
-		<script type = "text.javascript" src = "/javascript/game.js"></script>
+		<link rel = "stylesheet" href = "css/style.css"><link rel = "stylesheet" href = "css/reset.css">
+		<!--<script type = "text.javascript" src = "javascript/game.js"></script>-->
 	</head>
 	<body>
 		<h1>MAGIKAL KOMBAT!!!</h1>
 		<p>You are a starry-eyed child in need of a parent to prepare you for adventure and making your wishes come true. But only one parent will remain standing and raise you throughout the hardships of life. You must choose the parent who can eliminate the rest in the roster.</p>
 
 		<div class = "bio">
-			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa profile" height = "100px" width = "100px">
+			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa profile" height = "130px" width = "130px" onclick="document.getElementById('Mufasa').style.borderColor='orange'" onclick="document.getElementById('Mufasa').style.borderWidth='5px'">
 			<h3>Mufasa</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom profile" height = "100px" width = "100px">
+			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom profile" height = "130px" width = "130px" onclick = "document.getElementById('Bambis-Mom').style.border-color = 'orange'" onclick = "document.getElementById('Bambis-Mom').style.border-width = '5px'">
 			<h3>Bambi's Mom</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Mother-Gothel" src = "images/character-select/Gothel.png" alt = "Mother Gothel profile" height = "100px" width = "100px">
+			<img id = "Mother-Gothel" src = "images/character-select/Gothel.png" alt = "Mother Gothel profile" height = "130px" width = "130px" onclick = "document.getElementById('Mother-Gothel').style.border-color = 'orange'" onclick = "document.getElementById('Mother-Gothel').style.border-width = '5px'">
 			<h3>Mother Gothel</h3>
 			<p>
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Queen" src = "images/character-select/Queen.png" alt = "Evil Queen profile" height = "100px" width = "100px">
+			<img id = "Queen" src = "images/character-select/Queen.png" alt = "Evil Queen profile" height = "130px" width = "130px" onclick = "document.getElementById('Queen').style.border-color = 'orange'" onclick = "document.getElementById('Queen').style.border-width = '5px'">
 			<h3>Evil Queen</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Angarr-and-Iduna" src = "images/character-select/Angarr-and-Iduna.png" alt = "King Angarr and Queen Iduna profile" height = "130px" width = "130px">
+			<img id = "Angarr-and-Iduna" src = "images/character-select/Angarr-and-Iduna.png" alt = "King Angarr and Queen Iduna profile" height = "130px" width = "130px" onclick = "document.getElementById('Angarr-and-Iduna').style.border-color = 'orange'" onclick = "document.getElementById('Angarr-and-Iduna').style.border-width = '5px'">
 			<h3>King Angarr and Queen Iduna</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Frollo" src = "images/character-select/Frollo.png" alt = "Judge Claude Frollo profile" height = "130px" width = "130px">
+			<img id = "Frollo" src = "images/character-select/Frollo.png" alt = "Judge Claude Frollo profile" height = "130px" width = "130px" onclick = "document.getElementById('Frollo').style.border-color = 'orange'" onclick = "document.getElementById('Frollo').style.border-width = '5px'">
 			<h3>Judge Claude Frollo</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Kerchak" src = "images/character-select/Kerchak.png" alt = "Kerchak profile" height = "130px" width = "130px">
+			<img id = "Kerchak" src = "images/character-select/Kerchak.png" alt = "Kerchak profile" height = "130px" width = "130px" onclick = "document.getElementById('Kerchak').style.border-color = 'orange'" onclick = "document.getElementById('Kerchak').style.border-width = '5px'">
 			<h3>Kerchak</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "James" src = "images/character-select/James.png" alt = "James profile" height = "130px" width = "130px">
+			<img id = "James" src = "images/character-select/James.png" alt = "James profile" height = "130px" width = "130px" onclick = "document.getElementById('James').style.border-color = 'orange'" onclick = "document.getElementById('James').style.border-width = '5px'">
 			<h3>James</h3>
 			<p>
 				
@@ -67,5 +67,63 @@
 	
 		
 		<script type = "text.javascript" src = "https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script>
+			
+//REMEMBER TO CONSOLE.LOG EVERTHING! LEAVE NO STONE UNTURNED!
+
+//Step 1: Create variables on which all your functions operate (characters, stats).
+
+/*""var characters = ["Mufasa", "Bambis-Mom", "Gothel", "Queen", "A-n-I", "Frollo", "Kerchak", "James"]; 
+var hp = 100
+var atk = [4,3,1,3,2,1,4,2]
+var catk = [a,b,c,d,e,f,g,h]""*/
+
+//Step2: Create FUNCTIONs for your INTEGERs. 
+
+
+//Step 3: Assign stats to EACH character.
+
+/*""characters.indexOf() = atk.indexOf();
+characters.indexOf() = catk.indexOf();""*/
+
+/*Step 4: Create FUNCTIONs which subtract attack value from hp and add increasing multiple of base atk
+to current atk power after every turn. For balance, catk will need to be much higher than base atk.*/
+
+/*Step 5: Create an EVENT which causes characters to respond to the CLICK of a mouse. Then create a FUNCTION which causes
+opponent to counter attack after player clicks.*/
+//Assign images to each index in var characters. Remember how to pull elements to JS.
+//CAUTION: Keep in mind in which order the characters take their turn.
+
+$("img").click(function() {
+	//<--Above $ "not defined"? Neither the examples pushed on Git nor the format found in W3 pages have proven useful on this assignment. Talk to someone.-->
+
+	/*retrieve a CSS attribute. Put a colored border around the selected character.
+	Then create a confirm() method to ask user if that's the character they want to use all throughout the game. If yes, let the slaughtering begin!*/
+	console.log(this);
+	confirm("Is this your desired champion and parent? You cannot change parents midway through the game."); 
+	/*""if(confirm() = true){
+	alert("You have selected " + characters.indexOf() + ". May the best parent win and live to tell the tale!");
+	console.log(if(confirm() = true));""<--Unexpected token "if-->*/
+
+	//Float selected character to the left for the rest of the game. Float all other characters to the right.
+	
+
+});
+
+//Step 6: Create a FUNCTION which removes character from roster when hp =< 0
+
+/*Step 7: Create a CONDITIONAL which displays the victory screen when all opponents are eliminated, 
+and one which displays the Game Over screen when player's hp =< 0*/
+
+//Step 8: 
+
+
+
+/*---Not a single JS command is affecting the page or console. Even if there are errors or misplaced characters,
+the console should have detected them and vaguely notified me. My only conclusion left is that the JS is not
+properly linked to the HTML. I've corrected my <script> tags 3 times, placed them in the <head> tags, the <body> tags,
+Placed one <script> in the <head> and other in the <body>, then tried reversing the order of those <script> sheets,
+nothing seems to work. Try to get help on that*/
+	</script>	
 	</body>
 </html>
