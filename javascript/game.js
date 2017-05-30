@@ -60,10 +60,9 @@ var player1 = charSelect
 var opponent = oppSelect
 //Step 6: Create a FUNCTION which removes character from roster when hp =< 0
 if(opponent.remainHp <= 0) {
-	function loser() {
-		
-	}
-}
+	var loser = str.replace(opponent, ___)
+	
+};
 /*Step 7: Create a CONDITIONAL which displays the victory screen when all opponents are eliminated, 
 and one which displays the Game Over screen when player's hp =< 0*/
 
