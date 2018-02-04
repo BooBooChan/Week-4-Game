@@ -2,22 +2,36 @@
 <html>
 	<head>
 		<title>Disney Parent Deathmatch Game</title>
+		<!--
 		<link rel = "stylesheet" href = "css/style.css"><link rel = "stylesheet" href = "css/reset.css">
+		-->
 		<!--<script type = "text.javascript" src = "javascript/game.js"></script>-->
 	</head>
 	<body>
 		<h1>MAGIKAL KOMBAT!!!</h1>
 		<p>You are a starry-eyed child in need of a parent to prepare you for adventure and making your wishes come true. But only one parent will remain standing and raise you throughout the hardships of life. You must choose the parent who can eliminate the rest in the roster.</p>
+		
+		<!--Here's the template for making each character bio-->
+		<div class = "bio">
+			<img id = "Char-Name" src = "image-source" alt = "Char-Name" height = "130px" width = "130px" onclick = "document.getElementById('Char-Name').style.borderColor = 'orange'" onclick = "document.getElementById('Char-Name').style.borderWidth = '5px'">
+			<h3>Character Name</h3>
+			<p>
+				
+			</p>
+		</div>
+		<!--End template-->
+
+		<!--Hmmm... I never learned why the onclick HTML property hasn't worked. Meanwhile, just stick to JQuery code for JS.-->
 
 		<div class = "bio">
-			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa profile" height = "130px" width = "130px" onclick="document.getElementById('Mufasa').style.borderColor='orange'" onclick="document.getElementById('Mufasa').style.borderWidth='5px'">
+			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa" height = "130px" width = "130px" onclick="document.getElementById('Mufasa').style.borderColor='orange'" onclick="document.getElementById('Mufasa').style.borderWidth='5px'">
 			<h3>Mufasa</h3>
 			<p>
 				
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom profile" height = "130px" width = "130px" onclick = "document.getElementById('Bambis-Mom').style.border-color = 'orange'" onclick = "document.getElementById('Bambis-Mom').style.border-width = '5px'">
+			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom" height = "130px" width = "130px" onclick = "document.getElementById('Bambis-Mom').style.borderColor = 'orange'" onclick = "document.getElementById('Bambis-Mom').style.borderWidth = '5px'">
 			<h3>Bambi's Mom</h3>
 			<p>
 				
@@ -66,7 +80,9 @@
 		</div>
 	
 		
-		<script type = "text.javascript" src = "https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!--CAUTION! JQUERY SHEETS ARE DEPENDENT ON INTERNET ACCESS. YOU CANNOT TEST JQUERY JS ON JUST YOUR LOCAL DRIVE.-->
+		
 		<script>
 			
 //REMEMBER TO CONSOLE.LOG EVERTHING! LEAVE NO STONE UNTURNED!
@@ -94,13 +110,19 @@ opponent to counter attack after player clicks.*/
 //Assign images to each index in var characters. Remember how to pull elements to JS.
 //CAUTION: Keep in mind in which order the characters take their turn.
 
-$("img").click(function() {
-	//<--Above $ "not defined"? Neither the examples pushed on Git nor the format found in W3 pages have proven useful on this assignment. Talk to someone.-->
+$("#Mufasa").click(function() {
 
+	console.log("GOT CLICK FOR MUFASA SUCKAS!!!!!!");
+
+	//document.getElementById("Mufasa").style.borderColor = "orange";
+	
+	$("#Mufasa").css("border", "5px solid orange");	
+//document.getElementById("Mufasa").style.borderColor = "orange";
+	
+	//document.getElementById("Mufasa").style.border = "5px solid orange";
 	/*retrieve a CSS attribute. Put a colored border around the selected character.
 	Then create a confirm() method to ask user if that's the character they want to use all throughout the game. If yes, let the slaughtering begin!*/
-	console.log(this);
-	confirm("Is this your desired champion and parent? You cannot change parents midway through the game."); 
+	//confirm("Is this your desired champion and parent? You cannot change parents midway through the game."); 
 	/*""if(confirm() = true){
 	alert("You have selected " + characters.indexOf() + ". May the best parent win and live to tell the tale!");
 	console.log(if(confirm() = true));""<--Unexpected token "if-->*/
@@ -108,6 +130,37 @@ $("img").click(function() {
 	//Float selected character to the left for the rest of the game. Float all other characters to the right.
 	
 
+});
+$("#Bambis-Mom").click(function(){
+	console.log("She's... AAAALLLIIIIIIIIIIIIVVVVEEE!");
+	$("#Bambis-Mom").css("border", "5px solid orange");
+	// if($("img")!== $("#Bambis-Mom")){
+	// 	this.delete(this.css("border"));//Hopefully this will delete the border of the image not selected.
+	// };
+});
+$("#Mother-Gothel").click(function(){
+	console.log("You're just glowing today!");
+	$("#Mother-Gothel").css("border", "5px solid orange");
+});
+$("#Queen").click(function(){
+	console.log("The poisoned border~");
+	$("#Queen").css("border", "5px solid orange");
+});
+$("#Angarr-and-Iduna").click(function(){
+	console.log("Never leave the orange box!");
+	$("#Angarr-and-Iduna").css("border", "5px solid orange");
+});
+$("#Frollo").click(function(){
+	console.log("I'm so much purer than this common, vulgar, weak, licentious border!");
+	$("#Frollo").css("border", "5px solid orange");
+});
+$("#Kerchak").click(function(){
+	console.log("This border color doesn't match the jungle.");
+	$("#Kerchak").css("border", "5px solid orange");
+});
+$("#James").click(function(){
+	console.log("I have been chosen by the Orange Border.");
+	$("#James").css("border", "5px solid orange");
 });
 
 //Step 6: Create a FUNCTION which removes character from roster when hp =< 0
