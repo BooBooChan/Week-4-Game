@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html>
+<meta charset = "UTF-8">
 	<head>
 		<title>Disney Parent Deathmatch Game</title>
-		<!--
 		<link rel = "stylesheet" href = "css/style.css"><link rel = "stylesheet" href = "css/reset.css">
-		-->
+		
 		<!--<script type = "text.javascript" src = "javascript/game.js"></script>-->
+			
+		
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!--CAUTION! JQUERY SHEETS ARE DEPENDENT ON INTERNET ACCESS. YOU CANNOT TEST JQUERY JS ON JUST YOUR LOCAL DRIVE.-->
+	<script>
+$(document).ready(function(){
+
+
+	//REMEMBER TO CONSOLE.LOG EVERTHING! LEAVE NO STONE UNTURNED!
+
+	//Step 1: Create variables on which all your functions operate (characters, stats).
+
+	/*""var characters = ["Mufasa", "Bambis-Mom", "Gothel", "Queen", "A-n-I", "Frollo", "Kerchak", "James"]; 
+	var hp = 100
+	var atk = [4,3,1,3,2,1,4,2]
+	var catk = [a,b,c,d,e,f,g,h]""*/
+
+	//Step2: Create FUNCTIONs for your INTEGERs. 
+
+
+	//Step 3: Assign stats to EACH character.
+
+	/*""characters.indexOf() = atk.indexOf();
+	characters.indexOf() = catk.indexOf();""*/
+
+	/*Step 4: Create FUNCTIONs which subtract attack value from hp and add increasing multiple of base atk
+	to current atk power after every turn. For balance, catk will need to be much higher than base atk.*/
+
+	/*Step 5: Create an EVENT which causes characters to respond to the CLICK of a mouse. Then create a FUNCTION which causes
+	opponent to counter attack after player clicks.*/
+	//Assign images to each index in var characters. Remember how to pull elements to JS.
+	//CAUTION: Keep in mind in which order the characters take their turn.
+	$("img").click(function(){
+		console.log("The image has been clicked");
+		/* 
+		// $("img").removeClass("select-border");
+		// $(this).addClass("select-border"); 
+		The above commented code has failed to add a border. Try using the attr() effect instead.
+		*/ 
+		$(this).attr("opacity", 1);
+		if($(this).attr("opacity", 1) == true){
+			console.log("The 5px orange double border has been added.");
+		}else{
+			console.log("Hmm... where's the border?");
+		};
+	});
+
+	$("#Mufasa").click(function() {
+
+		console.log("GOT CLICK FOR MUFASA SUCKAS!!!!!!");
+
+		//document.getElementById("Mufasa").style.borderColor = "orange";
+		
+		// $("#Mufasa").css("border", "5px solid orange");	
+		// $("img").removeClass("select-border");
+		// $("#Mufasa").addClass("select-border");
+	//document.getElementById("Mufasa").style.borderColor = "orange";
+		
+		//document.getElementById("Mufasa").style.border = "5px solid orange";
+		/*retrieve a CSS attribute. Put a colored border around the selected character.
+		Then create a confirm() method to ask user if that's the character they want to use all throughout the game. If yes, let the slaughtering begin!*/
+		//confirm("Is this your desired champion and parent? You cannot change parents midway through the game."); 
+		/*""if(confirm() = true){
+		alert("You have selected " + characters.indexOf() + ". May the best parent win and live to tell the tale!");
+		console.log(if(confirm() = true));""<--Unexpected token "if-->*/
+
+		//Float selected character to the left for the rest of the game. Float all other characters to the right.
+		
+
+	});//End $("#Mufasa") click event
+	$("#Bambis-Mom").click(function(){
+		console.log("She's... AAAALLLIIIIIIIIIIIIVVVVEEE!");
+		// $("#Bambis-Mom").css("border", "5px solid orange");
+		// if($("img").click() !== $("#Bambis-Mom")){
+		// 	this.delete(this.css("border"));Hopefully this will delete the border of the image not selected.
+	});
+	$("#Mother-Gothel").click(function(){
+		console.log("You're just glowing today!");
+		$("#Mother-Gothel").css("border", "5px solid orange");
+	});
+	$("#Queen").click(function(){
+		console.log("The poisoned border~");
+		$("#Queen").css("border", "5px solid orange");
+	});
+	$("#Angarr-and-Iduna").click(function(){
+		console.log("Never leave the orange box!");
+		$("#Angarr-and-Iduna").css("border", "5px solid orange");
+	});
+	$("#Frollo").click(function(){
+		console.log("I'm so much purer than this common, vulgar, weak, licentious border!");
+		$("#Frollo").css("border", "5px solid orange");
+	});
+	$("#Kerchak").click(function(){
+		console.log("This border color doesn't match the jungle.");
+		$("#Kerchak").css("border", "5px solid orange");
+	});
+
+	$("#James").click(function(){
+		console.log("I have been chosen by the Orange Border.");
+		$("#James").css("border", "5px solid orange");
+	});//end $("#James") click event
+});	//End document.ready() feature
+
+		//Step 6: Create a FUNCTION which removes character from roster when hp =< 0
+
+		/*Step 7: Create a CONDITIONAL which displays the victory screen when all opponents are eliminated, 
+		and one which displays the Game Over screen when player's hp =< 0*/
+
+		//Step 8: 
+
+
+
+		/*---Not a single JS command is affecting the page or console. Even if there are errors or misplaced characters,
+		the console should have detected them and vaguely notified me. My only conclusion left is that the JS is not
+		properly linked to the HTML. I've corrected my <script> tags 3 times, placed them in the <head> tags, the <body> tags,
+		Placed one <script> in the <head> and other in the <body>, then tried reversing the order of those <script> sheets,
+		nothing seems to work. Try to get help on that*/
+	
+
+		</script>	
 	</head>
 	<body>
 		<h1>MAGIKAL KOMBAT!!!</h1>
@@ -24,159 +144,63 @@
 		<!--Hmmm... I never learned why the onclick HTML property hasn't worked. Meanwhile, just stick to JQuery code for JS.-->
 
 		<div class = "bio">
-			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa" height = "130px" width = "130px" onclick="document.getElementById('Mufasa').style.borderColor='orange'" onclick="document.getElementById('Mufasa').style.borderWidth='5px'">
+			<img id = "Mufasa" src = "images/character-select/Mufasa.png" alt = "Mufasa" height = "130px" width = "130px">
 			<h3>Mufasa</h3>
 			<p>
-				
+				A father of one. Everything the light touches is Mufasa's kingdom. He's strong, fierce, and voiced by James Earl Jones. He is sometimes hampered by bitter sibling rivalry with his bro, but will stay always stay by your side in this life and the next... but preferrably the former. His favorite food is antelope.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom" height = "130px" width = "130px" onclick = "document.getElementById('Bambis-Mom').style.borderColor = 'orange'" onclick = "document.getElementById('Bambis-Mom').style.borderWidth = '5px'">
+			<img id = "Bambis-Mom" src = "images/character-select/Bambis-Mom.png" alt = "Bambi's Mom" height = "130px" width = "130px">
 			<h3>Bambi's Mom</h3>
 			<p>
-				
+				A mother of one. She doesn't have a real name, but how can you go wrong with one who raised the prince of the forest himself? Bambi's Mom knows how intimidating and dangerous the forest can get, but it's home, and she'll guide you every step of the way and make even the the most savage environment a magical trip. Her favorite food is flower blossoms.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Mother-Gothel" src = "images/character-select/Gothel.png" alt = "Mother Gothel profile" height = "130px" width = "130px" onclick = "document.getElementById('Mother-Gothel').style.border-color = 'orange'" onclick = "document.getElementById('Mother-Gothel').style.border-width = '5px'">
+			<img id = "Mother-Gothel" src = "images/character-select/Gothel.png" alt = "Mother Gothel profile" height = "130px" width = "130px">
 			<h3>Mother Gothel</h3>
 			<p>
+				A surrogate mother of one. When she's not snatching babies out of their crib, she's very caring and nurturing. A little vain, perhaps, but mother knows best, and she'll give you everything a child could ask for, so long as you don't leave your house, ever. She'll bring you delicious food, paint and decorate your bedroom She's also got an ear for music, so she'll appreciate you singing a song for her every day.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Queen" src = "images/character-select/Queen.png" alt = "Evil Queen profile" height = "130px" width = "130px" onclick = "document.getElementById('Queen').style.border-color = 'orange'" onclick = "document.getElementById('Queen').style.border-width = '5px'">
+			<img id = "Queen" src = "images/character-select/Queen.png" alt = "Evil Queen profile" height = "130px" width = "130px">
 			<h3>Evil Queen</h3>
 			<p>
-				
+				A stepmother of one. Whether in the terrifying forests or in the amiable cottage of the seven dwarves, the queen will not let her frown waver in the face of anything. She's somewhat insecure about her body image, even keeping a mirror in her throne room at all times, so be careful what you say around her. She prefers you wear rags. Yes, she's high maitenance, but when she's calm, she'll let you roam wherever you please. In fact, she might never look you in the face, which is the highest praise you can ask from her! She's got a fun chemistry set you can play with in her basement. Her favorite food is apples.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Angarr-and-Iduna" src = "images/character-select/Angarr-and-Iduna.png" alt = "King Angarr and Queen Iduna profile" height = "130px" width = "130px" onclick = "document.getElementById('Angarr-and-Iduna').style.border-color = 'orange'" onclick = "document.getElementById('Angarr-and-Iduna').style.border-width = '5px'">
+			<img id = "Angarr-and-Iduna" src = "images/character-select/Angarr-and-Iduna.png" alt = "King Angarr and Queen Iduna profile" height = "130px" width = "130px">
 			<h3>King Angarr and Queen Iduna</h3>
 			<p>
-				
+				Mother and father of two.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Frollo" src = "images/character-select/Frollo.png" alt = "Judge Claude Frollo profile" height = "130px" width = "130px" onclick = "document.getElementById('Frollo').style.border-color = 'orange'" onclick = "document.getElementById('Frollo').style.border-width = '5px'">
+			<img id = "Frollo" src = "images/character-select/Frollo.png" alt = "Judge Claude Frollo profile" height = "130px" width = "130px">
 			<h3>Judge Claude Frollo</h3>
 			<p>
-				
+				Surrogate father of one. KYRIE ELEISON! Claude Frollo knows the cruelty and dangers that surround his domicile and prepares himself and his kin for any occasion. He's even got dozens of soldiers under his command, so this cruel world can't reach out to you so easily. He hates everyone; he hates you. But he'll shelter you if it's to save his own sorry soul. He'll let you use Notre Dame's decor as a playground when he's out working, so there's hours of entertainment every day. 	
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "Kerchak" src = "images/character-select/Kerchak.png" alt = "Kerchak profile" height = "130px" width = "130px" onclick = "document.getElementById('Kerchak').style.border-color = 'orange'" onclick = "document.getElementById('Kerchak').style.border-width = '5px'">
+			<img id = "Kerchak" src = "images/character-select/Kerchak.png" alt = "Kerchak profile" height = "130px" width = "130px">
 			<h3>Kerchak</h3>
 			<p>
-				
+				Blood father of one, surrogate father of one. Kerchak probably doesn't want you, since he knows that a lone human is never alone for long. I guess that's good news for you, but not so much for your potential family of gorillas. Luckily, he's got a dependable, benevolent community whose members are always looking out for each other.
 			</p>
 		</div>
 		<div class = "bio">
-			<img id = "James" src = "images/character-select/James.png" alt = "James profile" height = "130px" width = "130px" onclick = "document.getElementById('James').style.border-color = 'orange'" onclick = "document.getElementById('James').style.border-width = '5px'">
+			<img id = "James" src = "images/character-select/James.png" alt = "James profile" height = "130px" width = "130px">
 			<h3>James</h3>
 			<p>
-				
+				Father of one. One word to describe this man is "humble". He doesn't make much money, but he
 			</p>
 		</div>
-	
+
 		
-		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<!--CAUTION! JQUERY SHEETS ARE DEPENDENT ON INTERNET ACCESS. YOU CANNOT TEST JQUERY JS ON JUST YOUR LOCAL DRIVE.-->
 		
-		<script>
-			
-//REMEMBER TO CONSOLE.LOG EVERTHING! LEAVE NO STONE UNTURNED!
-
-//Step 1: Create variables on which all your functions operate (characters, stats).
-
-/*""var characters = ["Mufasa", "Bambis-Mom", "Gothel", "Queen", "A-n-I", "Frollo", "Kerchak", "James"]; 
-var hp = 100
-var atk = [4,3,1,3,2,1,4,2]
-var catk = [a,b,c,d,e,f,g,h]""*/
-
-//Step2: Create FUNCTIONs for your INTEGERs. 
-
-
-//Step 3: Assign stats to EACH character.
-
-/*""characters.indexOf() = atk.indexOf();
-characters.indexOf() = catk.indexOf();""*/
-
-/*Step 4: Create FUNCTIONs which subtract attack value from hp and add increasing multiple of base atk
-to current atk power after every turn. For balance, catk will need to be much higher than base atk.*/
-
-/*Step 5: Create an EVENT which causes characters to respond to the CLICK of a mouse. Then create a FUNCTION which causes
-opponent to counter attack after player clicks.*/
-//Assign images to each index in var characters. Remember how to pull elements to JS.
-//CAUTION: Keep in mind in which order the characters take their turn.
-
-$("#Mufasa").click(function() {
-
-	console.log("GOT CLICK FOR MUFASA SUCKAS!!!!!!");
-
-	//document.getElementById("Mufasa").style.borderColor = "orange";
-	
-	$("#Mufasa").css("border", "5px solid orange");	
-//document.getElementById("Mufasa").style.borderColor = "orange";
-	
-	//document.getElementById("Mufasa").style.border = "5px solid orange";
-	/*retrieve a CSS attribute. Put a colored border around the selected character.
-	Then create a confirm() method to ask user if that's the character they want to use all throughout the game. If yes, let the slaughtering begin!*/
-	//confirm("Is this your desired champion and parent? You cannot change parents midway through the game."); 
-	/*""if(confirm() = true){
-	alert("You have selected " + characters.indexOf() + ". May the best parent win and live to tell the tale!");
-	console.log(if(confirm() = true));""<--Unexpected token "if-->*/
-
-	//Float selected character to the left for the rest of the game. Float all other characters to the right.
-	
-
-});
-$("#Bambis-Mom").click(function(){
-	console.log("She's... AAAALLLIIIIIIIIIIIIVVVVEEE!");
-	$("#Bambis-Mom").css("border", "5px solid orange");
-	// if($("img")!== $("#Bambis-Mom")){
-	// 	this.delete(this.css("border"));//Hopefully this will delete the border of the image not selected.
-	// };
-});
-$("#Mother-Gothel").click(function(){
-	console.log("You're just glowing today!");
-	$("#Mother-Gothel").css("border", "5px solid orange");
-});
-$("#Queen").click(function(){
-	console.log("The poisoned border~");
-	$("#Queen").css("border", "5px solid orange");
-});
-$("#Angarr-and-Iduna").click(function(){
-	console.log("Never leave the orange box!");
-	$("#Angarr-and-Iduna").css("border", "5px solid orange");
-});
-$("#Frollo").click(function(){
-	console.log("I'm so much purer than this common, vulgar, weak, licentious border!");
-	$("#Frollo").css("border", "5px solid orange");
-});
-$("#Kerchak").click(function(){
-	console.log("This border color doesn't match the jungle.");
-	$("#Kerchak").css("border", "5px solid orange");
-});
-$("#James").click(function(){
-	console.log("I have been chosen by the Orange Border.");
-	$("#James").css("border", "5px solid orange");
-});
-
-//Step 6: Create a FUNCTION which removes character from roster when hp =< 0
-
-/*Step 7: Create a CONDITIONAL which displays the victory screen when all opponents are eliminated, 
-and one which displays the Game Over screen when player's hp =< 0*/
-
-//Step 8: 
-
-
-
-/*---Not a single JS command is affecting the page or console. Even if there are errors or misplaced characters,
-the console should have detected them and vaguely notified me. My only conclusion left is that the JS is not
-properly linked to the HTML. I've corrected my <script> tags 3 times, placed them in the <head> tags, the <body> tags,
-Placed one <script> in the <head> and other in the <body>, then tried reversing the order of those <script> sheets,
-nothing seems to work. Try to get help on that*/
-	</script>	
 	</body>
 </html>

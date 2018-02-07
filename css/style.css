@@ -1,4 +1,4 @@
-img {}
+img {opacity: 0.7;}
 #Mufasa{}
 #Bambis-Mom{}
 #Gothel{}
@@ -7,3 +7,4 @@ img {}
 #Frollo{}
 #Kerchak{}
 #James{}
+.select-border{border:"5px orange solid";}

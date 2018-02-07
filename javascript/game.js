@@ -1,5 +1,6 @@
 
 //REMEMBER TO CONSOLE.LOG EVERTHING! LEAVE NO STONE UNTURNED!
+$(document).ready(function(){
 
 //Step 1: Create variables on which all your functions operate (characters, stats).
 var characters = ["mufasa", "bambisMom", "gothel", "queen", "aNI", "frollo", "kerchak", "james"]; 
@@ -94,6 +95,7 @@ and one which displays the Game Over screen when player's hp =< 0*/
 for(i < opponent.length; i = 0; i ++){
 	if ()
 }
+});
 //Step 8: 
 
 
